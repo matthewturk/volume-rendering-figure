@@ -1,0 +1,21 @@
+{
+  "name": "volume-rendering-figure",
+  "version": "1.0.0",
+  "description": "A figure demonstrating volume rendering",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "clean": "rimraf lib tsconfig.tsbuildinfo",
+    "eslint": "eslint . --ext .ts,.tsx --fix"
+  },
+  "author": "Matthew J. Turk",
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "rimraf": "^3.0.2",
+    "tslint": "^6.1.3"
+  }
+}
