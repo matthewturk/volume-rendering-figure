@@ -1,10 +1,9 @@
 import {IGridSpec} from './grid';
+import { IPoint } from './interfaces';
 
 export interface IRay {
-    x0: number;
-    x1: number;
-    y0: number;
-    y1: number;
+    p0: IPoint;
+    p1: IPoint;
 }
 
 export interface ICellTraversal {
@@ -15,18 +14,14 @@ export interface ICellTraversal {
 
 export class Ray implements IRay { 
     constructor(x0: number, y0: number, x1: number, y1: number) {
-        this.x0 = x0;
-        this.x1 = x1;
-        this.y0 = y0;
-        this.y1 = y1;
+        this.p0 = {x: x0, y: y0};
+        this.p1 = {x: x1, y: y1};
     }
 
     public walkRay() : ICellTraversal[] {
         return [];
     }
 
-    x0: number;
-    x1: number;
-    y0: number;
-    y1: number;
+    p0: IPoint;
+    p1: IPoint;
 }
